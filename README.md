@@ -9,6 +9,22 @@ Zipwn is a simple automation tool that performs a **Dictionary Attack** on passw
 *   **Windows:** [7-Zip](https://www.7-zip.org/) installed in default location (`C:\Program Files\7-Zip`).
 *   **Linux:** `p7zip-full` installed via your package manager.
 
+## Wordlists (The Key Ingredient)
+To use this tool, you need a **wordlist**—a simple text file (`.txt`) containing a list of potential passwords, one per line.
+
+### Where to Find Wordlists
+*   **SecLists:** The most popular collection of wordlists. You can download it from [GitHub](https://github.com/danielmiessler/SecLists).
+*   **RockYou:** A famous leaked password list often found on Kali Linux (`/usr/share/wordlists/rockyou.txt`).
+
+### How to Generate Your Own
+If you know specific details about the password (like length or characters used), you can generate a custom list using tools like **Crunch**.
+
+**Example (Linux):**
+Generate all 4-digit numeric pins:
+```bash
+crunch 4 4 0123456789 -o pins.txt
+```
+
 ## How to Use
 
 ### Windows
